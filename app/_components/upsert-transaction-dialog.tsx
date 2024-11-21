@@ -45,7 +45,7 @@ import { upsertTransaction } from "../_actions/add-transaction";
 interface UpsertTransactionDialogProps {
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
-  defaultValues: FormSchema;
+  defaultValues?: FormSchema;
   transactionId?: string;
 }
 
