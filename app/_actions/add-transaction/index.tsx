@@ -10,7 +10,7 @@ import {
 import { upsertTransactionSchema } from "./schema";
 import { revalidatePath } from "next/cache";
 
-interface UpsertTransactionProps {
+interface UpsertTransactionParams {
   id?: string;
   name: string;
   amount: number;
@@ -20,7 +20,7 @@ interface UpsertTransactionProps {
   date: Date;
 }
 
-export const upsertTransaction = async (params: UpsertTransactionProps) => {
+export const upsertTransaction = async (params: UpsertTransactionParams) => {
   upsertTransactionSchema.parse(params);
   const { userId } = await auth();
 
