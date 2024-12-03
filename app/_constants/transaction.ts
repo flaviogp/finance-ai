@@ -108,3 +108,13 @@ export const TRANSACTION_CATEGORY_LABELS = {
     },
 
   ]
+
+  export const TRANSACTION_PAYMENT_METHOD_ICONS = {
+    [TransactionPaymentMethod.BANK_TRANSFER]: "bank-transfer.svg",
+    [TransactionPaymentMethod.BANK_SLIP]: "bank-slip.svg",
+    [TransactionPaymentMethod.CASH]: "money.svg",
+    [TransactionPaymentMethod.CREDIT_CARD]: "credit-card.svg",
+    [TransactionPaymentMethod.DEBIT_CARD]: "debit-card.svg",
+    [TransactionPaymentMethod.OTHER]: "other.svg",
+    [TransactionPaymentMethod.PIX]: "pix.svg",
+  }
