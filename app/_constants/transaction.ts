@@ -52,7 +52,7 @@ export const TRANSACTION_CATEGORY_LABELS = {
     },
     {
       value: TransactionPaymentMethod.CREDIT_CARD,
-      label: "Cartão de Brédito",
+      label: "Cartão de Crédito",
     },
     {
       value: TransactionPaymentMethod.DEBIT_CARD,
