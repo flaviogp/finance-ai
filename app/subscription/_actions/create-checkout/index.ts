@@ -4,7 +4,7 @@ import { auth } from "@clerk/nextjs/server"
 import { Stripe } from 'stripe'
 
 export const createStripeCheckout = async () => {
-    const {userId} = auth()
+    const {userId} = await auth()
     if(!userId) throw new Error('Unauthorized ')
 
     if(!process.env.STRIPE_SECRET_KEY) throw new Error('Stripe secret key not found')
@@ -24,7 +24,7 @@ export const createStripeCheckout = async () => {
             }
         },
         line_items: [{
-            price: process.env.STRIPE_PREMIUN_PLAN_PRICE_ID,
+            price: process.env.STRIPE_PREMIUM_PLAN_PRICE_ID,
             quantity: 1
         }]
     })
